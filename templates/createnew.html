@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>PaaS</h2><br>
+
+<form action="/createnewauth" method="POST">
+    <label for="repourl">Repo URL:</label><br>
+    <input type="text" id="repourl" name="repourl"><br>
+    <label for="branch">Branch:</label><br>
+    <input type="text" id="branch" name="branch"><br><br>
+    <label for="port">Exposed Port to WORLD:</label><br>
+    <input type="text" id="port" name="port"><br><br>
+    <input type="submit" value="Submit">
+</form> 
+
+<br><br>
+{{if .}}
+    {{.}}
+{{end}}
+
+</body>
+</html>

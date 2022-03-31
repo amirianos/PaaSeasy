@@ -1,0 +1,97 @@
+[
+    {
+	"id": "hmvmtfz",
+	"execute-command": "/tmp/hmvmtfz/commands.sh",
+	"command-working-directory": "/tmp/hmvmtfz",
+	"pass-arguments-to-command": [
+	  {
+		"source": "payload",
+		"name": "repository.clone_url"
+	  }
+	],
+	"trigger-rule": {
+		"match":
+	{
+		  "type": "payload-hmac-sha1",
+		  "secret": "ZeEs7jMTzibo",
+	  "parameter":
+		  {
+			"source": "header",
+			"name": "X-Hub-Signature"
+		  }
+		}
+	  }
+  },
+
+    {
+	"id": "cSNfCxl",
+	"execute-command": "/home/ubuntu/amirtest/test.sh",
+	"command-working-directory": "/tmp/",
+	"pass-arguments-to-command": [
+	  {
+		"source": "payload",
+		"name": "repository.clone_url"
+	  }
+	],
+	"trigger-rule": {
+		"match":
+	{
+		  "type": "payload-hmac-sha1",
+		  "secret": "WcXfoUjvv0pI",
+	  "parameter":
+		  {
+			"source": "header",
+			"name": "X-Hub-Signature"
+		  }
+		}
+	  }
+  },
+
+    {
+	"id": "oE0V53s",
+	"execute-command": "/home/ubuntu/amirtest/test.sh",
+	"command-working-directory": "/tmp/",
+	"pass-arguments-to-command": [
+	  {
+		"source": "payload",
+		"name": "repository.clone_url"
+	  }
+	],
+	"trigger-rule": {
+		"match":
+	{
+		  "type": "payload-hmac-sha1",
+		  "secret": "OJAlw6rmAVnP",
+	  "parameter":
+		  {
+			"source": "header",
+			"name": "X-Hub-Signature"
+		  }
+		}
+	  }
+  },
+
+    {
+      "id": "awx-atest",
+      "execute-command": "/home/ubuntu/amirtest/test.sh",
+      "command-working-directory": "/tmp/",
+      "pass-arguments-to-command": [
+        {
+          "source": "payload",
+          "name": "repository.clone_url"
+        }
+      ],
+      "trigger-rule": {
+          "match":
+	  {
+            "type": "payload-hmac-sha1",
+            "secret": "amirishere",
+	    "parameter":
+            {
+              "source": "header",
+              "name": "X-Hub-Signature"
+            }
+          }
+        }
+    }
+  ]
